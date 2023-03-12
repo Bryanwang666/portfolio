@@ -12,6 +12,13 @@ import { useEffect } from 'react';
 export default function Portfolio() {
   const [selected, setSelected] = useState("Featured");
   const [data, setData] = useState([]);
+  const handleContextMenu = (e) => {
+    e.preventDefault(); // 阻止默认行为
+  };
+
+  const handleDragStart = (e) => {
+    e.preventDefault(); // 阻止默认行为
+  };
   const list = [
     {id:"Featured",
     title:"Featured",},
@@ -58,8 +65,11 @@ export default function Portfolio() {
         
         {data.map((d) => (
           <div className='item'>
-          <img src={d.img} alt='' />
-          <h3>{d.title}</h3>
+            
+            <img src={d.img} alt='' onContextMenu={handleContextMenu} onDragStart={handleDragStart}/>
+            
+            <a href={d.url} target="_blank"><h3>{d.title}</h3></a>
+            
         </div>
         ))}
         

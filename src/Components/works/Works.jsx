@@ -3,31 +3,39 @@ import './works.scss'
 
 export default function Works() {
   const [currentSlider,setCurrentSlider] = useState(0);
-  
+  const handleContextMenu = (e) => {
+    e.preventDefault(); // 阻止默认行为
+  };
+
+  const handleDragStart = (e) => {
+    e.preventDefault(); // 阻止默认行为
+  };
   const data = [
     {
       id: 1,
-      title: "Mobile Social Media App1",
+      title: "6P Marketing",
       icon:"./images/web.png",
-      desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore doloremque nisi nostrum adipisci eum, quod dolore cumque, nulla, provident consequuntur ducimus necessitatibus ratione hic quidem iure mollitia voluptatum tempore recusandae.",
+      desc:"6P Marketing is a full-service marketing company that showcases its professional services and marketing expertise to potential clients through its website. The website includes company information, service offerings, client case studies, team introductions, and the latest news, demonstrating the company's professionalism and capabilities. Additionally, the website is designed with a clean and clear layout, making it easy to navigate for users.",
       img:
-        "https://cdn.dribbble.com/users/2597268/screenshots/15468893/media/44313553d73ba41580f1df69749bba28.jpg?compress=1&resize=1200x900",
+        "./images/6pmarketing-long.png",
+      url:"https://6pmarketing.com/",
     },
     {
       id: 2,
-      title: "Mobile Social Media App2",
+      title: "Custom Helicopters",
       icon:"./images/web.png",
-      desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore doloremque nisi nostrum adipisci eum, quod dolore cumque, nulla, provident consequuntur ducimus necessitatibus ratione hic quidem iure mollitia voluptatum tempore recusandae.",
+      desc:"Custom Helicopter is a company that specializes in designing and building unique, high-quality helicopters tailored to the specific needs of their clients. Their website showcases their expertise in the field and provides detailed information about their services, including custom helicopter design, manufacturing, maintenance, and repair. Through their website, potential clients can learn more about the company's capabilities, view photos and videos of their helicopters in action, and easily contact them to discuss their project requirements.",
       img:
-        "https://cdn.dribbble.com/users/2597268/screenshots/15468893/media/44313553d73ba41580f1df69749bba28.jpg?compress=1&resize=1200x900",
+        "./images/Custom-Heli-long.png",
+      url:"https://www.customheli.com/",
     },
     {
       id: 3,
-      title: "Mobile Social Media App3",
-      icon:"./images/web.png",
-      desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore doloremque nisi nostrum adipisci eum, quod dolore cumque, nulla, provident consequuntur ducimus necessitatibus ratione hic quidem iure mollitia voluptatum tempore recusandae.",
+      title: "Multi Project Onboarding Journey (Email)",
+      icon:"./images/writing.png",
+      desc:"Multi Project Onboarding Journey is a journey that runs on SFMC (Salesforce Marketing Cloud). It is designed to cater to users with different account types and statuses by distinguishing them in data. Through the use of content blocks and AMPscript, the journey delivers customized content to the corresponding customers. This approach ensures that users receive personalized and relevant information based on their specific needs and status. By leveraging SFMC's advanced segmentation and automation capabilities, Multi Project Onboarding Journey offers an effective way to engage with users and improve their overall experience with the product or service.",
       img:
-        "https://cdn.dribbble.com/users/2597268/screenshots/15468893/media/44313553d73ba41580f1df69749bba28.jpg?compress=1&resize=1200x900",
+        "./images/Multi-Project-Onboarding-Journey-long.png",
     },
   ]
   const handleClick = (way)=>{
@@ -50,11 +58,11 @@ export default function Works() {
                   <p>
                     {d.desc}
                   </p>
-                  <span>Project</span>
+                  <a href={d.url} target="_blink">Project</a>
               </div>
             </div>
             <div className="right">
-              <img src={d.img} alt=''/>
+              <img src={d.img} alt={d.title} onContextMenu={handleContextMenu} onDragStart={handleDragStart}/>
             </div>
           </div>
         </div>

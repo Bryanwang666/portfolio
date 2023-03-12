@@ -81,7 +81,7 @@
                             width: 40px;
                             height: 40px;
                             border-radius: 50%;
-                            background-color: #008B8B;
+                            background-color: #FF7F50;
                             display:flex;
                             align-items: center;
                             justify-content: center;
@@ -110,11 +110,11 @@
                                   }
                         }
                         p{
-                            font-size: 16px;
+                            font-size: 14px;
                             @include mobile{
                                 display: none;}
                         }
-                        span{
+                        a{
                             font-size: 12px;
                             font-weight: 600;
                             text-decoration: underline;
