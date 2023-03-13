@@ -13,6 +13,15 @@ export default function Works() {
   const data = [
     {
       id: 1,
+      title: "WCH",
+      icon:"./images/web.png",
+      desc:"The site appears to be the Warkentin Custom Homes, a company based in Manitoba, Canada that specializes in building custom homes for clients. The website features information about their services, as well as photo galleries of their completed projects. Visitors can also use the site to request a consultation or learn more about the company.",
+      img:
+        "./images/wch-long.png",
+      url:"https://warkentinhomes.com/",
+    },
+    {
+      id: 2,
       title: "6P Marketing",
       icon:"./images/web.png",
       desc:"6P Marketing is a full-service marketing company that showcases its professional services and marketing expertise to potential clients through its website. The website includes company information, service offerings, client case studies, team introductions, and the latest news, demonstrating the company's professionalism and capabilities. Additionally, the website is designed with a clean and clear layout, making it easy to navigate for users.",
@@ -21,7 +30,7 @@ export default function Works() {
       url:"https://6pmarketing.com/",
     },
     {
-      id: 2,
+      id: 3,
       title: "Custom Helicopters",
       icon:"./images/web.png",
       desc:"Custom Helicopter is a company that specializes in designing and building unique, high-quality helicopters tailored to the specific needs of their clients. Their website showcases their expertise in the field and provides detailed information about their services, including custom helicopter design, manufacturing, maintenance, and repair. Through their website, potential clients can learn more about the company's capabilities, view photos and videos of their helicopters in action, and easily contact them to discuss their project requirements.",
@@ -30,7 +39,7 @@ export default function Works() {
       url:"https://www.customheli.com/",
     },
     {
-      id: 3,
+      id: 4,
       title: "Multi Project Onboarding Journey (Email)",
       icon:"./images/writing.png",
       desc:"Multi Project Onboarding Journey is a journey that runs on SFMC (Salesforce Marketing Cloud). It is designed to cater to users with different account types and statuses by distinguishing them in data. Through the use of content blocks and AMPscript, the journey delivers customized content to the corresponding customers. This approach ensures that users receive personalized and relevant information based on their specific needs and status. By leveraging SFMC's advanced segmentation and automation capabilities, Multi Project Onboarding Journey offers an effective way to engage with users and improve their overall experience with the product or service.",
