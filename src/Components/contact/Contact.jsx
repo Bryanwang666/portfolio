@@ -15,7 +15,7 @@ export default function Contact() {
     })
       .then((response) => response.text())
       .then((data) => {
-        console.log(data);
+        //console.log(data);
         setMessage(true);
       })
       .catch((error) => {
