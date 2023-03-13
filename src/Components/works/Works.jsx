@@ -67,7 +67,7 @@ export default function Works() {
                   <p>
                     {d.desc}
                   </p>
-                  <a href={d.url} target="_blink">Project</a>
+                  <a href={d.url} target="_blink">Project&nbsp;<img src='images/right-arrow.png'/></a>
               </div>
             </div>
             <div className="right">
